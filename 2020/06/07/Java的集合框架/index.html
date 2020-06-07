@@ -5,20 +5,20 @@
   
 
   
-  <title>Hexo</title>
+  <title>Java的集合框架 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: this is my first blogJava的集合框架 Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数">
+  <meta name="description" content="Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Java的集合框架">
 <meta property="og:url" content="http://yoursite.com/2020/06/07/Java的集合框架/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: this is my first blogJava的集合框架 Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数">
+<meta property="og:description" content="Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2020-06-06T17:58:53.917Z">
+<meta property="og:updated_time" content="2020-06-07T07:17:35.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="title: this is my first blogJava的集合框架 Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数">
+<meta name="twitter:title" content="Java的集合框架">
+<meta name="twitter:description" content="Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -76,17 +76,26 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java的集合框架
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: this is my first blog<br>Java的集合框架</p>
-<p><img src="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>Collection是集合类的上级接口，继承与他的接口主要有Set 和List.</strong></p>
+        <p><img src="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>Collection是集合类的上级接口，继承与他的接口主要有Set 和List.</strong></p>
 <p><strong>ArrayList和LinkedList都实现了List接口，他们有以下的不同点：</strong><br>ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元素的时间复杂度是O(n)。<br>相对于ArrayList，LinkedList的插入，添加，删除操作速度更快，因为当元素被添加到集合任意位置的时候，不需要像数组那样重新计算大小或者是更新索引。<br>LinkedList比ArrayList更占内存，因为LinkedList为每一个节点存储了两个引用，一个指向前一个元素，一个指向下一个元素。</p>
 <p><strong>ArrayList 和Vector</strong>都是使用数组方式存储数据，此数组元素数大于实际存储的数据以便增加和插入元素，它们都允许直接按序号索引元素，但是插入元素要涉及数组元素移动等内存操作，所以索引数据快而插入数据慢，Vector由于使用了synchronized方法（线程安全），通常性能上较ArrayList差，而LinkedList使用双向链表实现存储，按序号索引数据需要进行前向或后向遍历，但是插入数据时只需要记录本项的前后项即可，所以插入速度较快。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/07/Java的集合框架/" data-id="ckb4qdmay0000qkvn0yqtitdv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/07/Java的集合框架/" data-id="ckb4qj6br0000fsvn4a1139ls" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,7 +108,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          如何在Hexo博客发布文章
         
       </div>
     </a>
@@ -144,11 +153,11 @@
       <ul>
         
           <li>
-            <a href="/2020/06/07/如何在Hexo博客发布文章/">(no title)</a>
+            <a href="/2020/06/07/如何在Hexo博客发布文章/">如何在Hexo博客发布文章</a>
           </li>
         
           <li>
-            <a href="/2020/06/07/Java的集合框架/">(no title)</a>
+            <a href="/2020/06/07/Java的集合框架/">Java的集合框架</a>
           </li>
         
           <li>
