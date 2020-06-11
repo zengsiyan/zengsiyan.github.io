@@ -1,211 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+const { Component } = require('inferno');
+const classname = require('hexo-component-inferno/lib/util/classname');
+const Head = require('./common/head');
+const Navbar = require('./common/navbar');
+const Widgets = require('./common/widgets');
+const Footer = require('./common/footer');
+const Scripts = require('./common/scripts');
+const Search = require('./common/search');
 
-  
-  <title>Java的集合框架 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java的集合框架">
-<meta property="og:url" content="http://yoursite.com/2020/06/07/Java的集合框架/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元">
-<meta property="og:locale" content="default">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2020-06-07T07:17:35.012Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java的集合框架">
-<meta name="twitter:description" content="Collection是集合类的上级接口，继承与他的接口主要有Set 和List. ArrayList和LinkedList都实现了List接口，他们有以下的不同点：ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Java的集合框架" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/07/Java的集合框架/" class="article-date">
-  <time datetime="2020-06-06T17:58:37.051Z" itemprop="datePublished">2020-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Java的集合框架
-    </h1>
-  
+module.exports = class extends Component {
+    render() {
+        const { env, site, config, page, helper, body } = this.props;
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://img-blog.csdnimg.cn/20190814175945354.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc3Nzg1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>Collection是集合类的上级接口，继承与他的接口主要有Set 和List.</strong></p>
-<p><strong>ArrayList和LinkedList都实现了List接口，他们有以下的不同点：</strong><br>ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元素的时间复杂度是O(n)。<br>相对于ArrayList，LinkedList的插入，添加，删除操作速度更快，因为当元素被添加到集合任意位置的时候，不需要像数组那样重新计算大小或者是更新索引。<br>LinkedList比ArrayList更占内存，因为LinkedList为每一个节点存储了两个引用，一个指向前一个元素，一个指向下一个元素。</p>
-<p><strong>ArrayList 和Vector</strong>都是使用数组方式存储数据，此数组元素数大于实际存储的数据以便增加和插入元素，它们都允许直接按序号索引元素，但是插入元素要涉及数组元素移动等内存操作，所以索引数据快而插入数据慢，Vector由于使用了synchronized方法（线程安全），通常性能上较ArrayList差，而LinkedList使用双向链表实现存储，按序号索引数据需要进行前向或后向遍历，但是插入数据时只需要记录本项的前后项即可，所以插入速度较快。</p>
+        const language = page.lang || page.language || config.language;
+        const columnCount = Widgets.getColumnCount(config.widgets);
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/07/Java的集合框架/" data-id="ckbaxl8yr0001qkvnyvhmupdm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2020/06/07/如何在Hexo博客发布文章/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          如何在Hexo博客发布文章
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/02/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/06/11/Java基础简单总结（一）/">Java基础简单总结（一）</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/07/如何在Hexo博客发布文章/">如何在Hexo博客发布文章</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/07/Java的集合框架/">Java的集合框架</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/12/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
-</body>
-</html>
+        return <html lang={language ? language.substr(0, 2) : ''}>
+            <Head env={env} site={site} config={config} helper={helper} page={page} />
+            <body class={`is-${columnCount}-column`}>
+                <Navbar config={config} helper={helper} page={page} />
+                <section class="section">
+                    <div class="container">
+                        <div class="columns">
+                            <div class={classname({
+                                column: true,
+                                'order-2': true,
+                                'column-main': true,
+                                'is-12': columnCount === 1,
+                                'is-8-tablet is-8-desktop is-8-widescreen': columnCount === 2,
+                                'is-8-tablet is-8-desktop is-6-widescreen': columnCount === 3
+                            })} dangerouslySetInnerHTML={{ __html: body }}></div>
+                            <Widgets site={site} config={config} helper={helper} page={page} position={'left'} />
+                            <Widgets site={site} config={config} helper={helper} page={page} position={'right'} />
+                        </div>
+                    </div>
+                </section>
+                <Footer config={config} helper={helper} />
+                <Scripts site={site} config={config} helper={helper} page={page} />
+                <Search config={config} helper={helper} />
+            </body>
+        </html>;
+    }
+};
