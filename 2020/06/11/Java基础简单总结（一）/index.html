@@ -1,43 +1,234 @@
-const { Component } = require('inferno');
-const classname = require('hexo-component-inferno/lib/util/classname');
-const Head = require('./common/head');
-const Navbar = require('./common/navbar');
-const Widgets = require('./common/widgets');
-const Footer = require('./common/footer');
-const Scripts = require('./common/scripts');
-const Search = require('./common/search');
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
 
-module.exports = class extends Component {
-    render() {
-        const { env, site, config, page, helper, body } = this.props;
+  
+  <title>Java基础简单总结（一） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、面向对象的特性封装：封装是指将对象的实现细节隐藏起来，然后通过公共的方法来向外暴露该对象的功能。继承：是实现软件复用的重要手段，能直接或间接获得父类的成员。多态：同一个行为具有多个不同表现形式或形态的能力。抽象：抽象是指从 特定的角度 出发，从已经存在的一些事物中 抽取 我们所关注的 特性、行为 2、面向过程和面向对象的区别面向过程：一种站在过程角度思考问题的思想。强调的是功能行为，功能的执行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础简单总结（一）">
+<meta property="og:url" content="http://yoursite.com/2020/06/11/Java基础简单总结（一）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、面向对象的特性封装：封装是指将对象的实现细节隐藏起来，然后通过公共的方法来向外暴露该对象的功能。继承：是实现软件复用的重要手段，能直接或间接获得父类的成员。多态：同一个行为具有多个不同表现形式或形态的能力。抽象：抽象是指从 特定的角度 出发，从已经存在的一些事物中 抽取 我们所关注的 特性、行为 2、面向过程和面向对象的区别面向过程：一种站在过程角度思考问题的思想。强调的是功能行为，功能的执行">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-06-11T15:21:53.196Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础简单总结（一）">
+<meta name="twitter:description" content="1、面向对象的特性封装：封装是指将对象的实现细节隐藏起来，然后通过公共的方法来向外暴露该对象的功能。继承：是实现软件复用的重要手段，能直接或间接获得父类的成员。多态：同一个行为具有多个不同表现形式或形态的能力。抽象：抽象是指从 特定的角度 出发，从已经存在的一些事物中 抽取 我们所关注的 特性、行为 2、面向过程和面向对象的区别面向过程：一种站在过程角度思考问题的思想。强调的是功能行为，功能的执行">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java基础简单总结（一）" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/11/Java基础简单总结（一）/" class="article-date">
+  <time datetime="2020-06-11T15:21:12.490Z" itemprop="datePublished">2020-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java基础简单总结（一）
+    </h1>
+  
 
-        const language = page.lang || page.language || config.language;
-        const columnCount = Widgets.getColumnCount(config.widgets);
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1、面向对象的特性</strong><br>封装：封装是指将对象的实现细节隐藏起来，然后通过公共的方法来向外暴露该对象的功能。<br>继承：是实现软件复用的重要手段，能直接或间接获得父类的成员。<br>多态：同一个行为具有多个不同表现形式或形态的能力。<br>抽象：抽象是指从 特定的角度 出发，从已经存在的一些事物中 抽取 我们所关注的 特性、行为</p>
+<p><strong>2、面向过程和面向对象的区别</strong><br>面向过程：一种站在过程角度思考问题的思想。强调的是功能行为，功能的执行过程<br>面向对象：一种站在对象的角度思考问题思想，强调的是具备某些功能的对象</p>
+<p><strong>3、Override（重写）和Overload（重载）</strong><br>Override是指子类对父类方法的一个重写<br>Overload是表示一个类中可以有多个名称相同的方法，但是方法的参数列表各不相同<br>构成重载的条件：参数类型不同、参数个数不同、参数顺序不同</p>
+<p><strong>4、Integer的缓存机制</strong><br>如果初始化的值没有在Integer缓存池的默认值-128-127范围，则会new对象<br>基本类型对应的缓冲池如下<br>boolean:true/false<br>byte:all valuew(-128-127)<br>short:-128-127<br>char:\u0000-\u007f(0-127)<br>long:-128-127<br>不被缓存<br>float<br>double<br> Integer c = 500;<br>          Integer d = 500;<br>            System.out.println(c == d);//false<br><strong>5、final</strong><br>数据：声明数据为常量，可以是编译时常量，也可以是在运行时被初始化后不能被改变的常量<br>对于基本类型，final使数值不变<br>对于引用类型，final使引用不变，也就是不能引用其他对象，但是被引用的本身使可以被修改的<br>final int x = 1;<br>// x = 2;  // cannot assign value to final variable ‘x’<br>final A y = new A();<br>y.a = 1;</p>
+<p>方法<br>声明的方法不能被子类重写<br>类<br>声明类不能继承<br><strong>6、static</strong><br>为什么说static块可以用来优化程序性能，是因为它的特性:只会在类加载的时候执行一次。因此，很多时候会将一些只需要进行一次的初始化操作都放在static代码块中进行。<br>静态变量<br>实例变量：每创建一个实例就会产生一个实例变量，他与该实例共同生死<br>静态变量：又称为类变量，这个变量使属于类的。<br>public class A {<br>    private int x;         // 实例变量<br>    private static int y;  // 静态变量<br>    public static void main(String[] args) {<br>        // int x = A.x;  // Non-static field ‘x’ cannot be referenced from a static context<br>        A a = new A();<br>        int x = a.x;<br>        int y = A.y;<br>    }<br>}</p>
+<p>静态方法：<br>静态方法在类加载的时候就存在了，它不依赖于任何实例。所以静态方法必须有实现，也就是说它不能是抽象方法。<br>public abstract class A {<br>    public static void func1(){<br>    }<br>    // public abstract static void func2();  // Illegal combination of modifiers: ‘abstract’ and ‘static’<br>}</p>
+<p>只能访问所属类的静态字段和静态方法，方法中不能有 this 和 super 关键字，因此这两个关键字与具体对象关联。<br>public class A {<br>    private static int x;<br>    private int y;<br>    public static void func1(){<br>        int a = x;<br>        // int b = y;  // Non-static field ‘y’ cannot be referenced from a static context<br>        // int b = this.y;     // ‘A.this’ cannot be referenced from a static context<br>    }<br>}</p>
+<p>静态语句块<br>静态语句块在类初始化时运行一次。<br>public class A {<br>    static {<br>        System.out.println(“123”);<br>    }</p>
+<pre><code>public static void main(String[] args) {
+    A a1 = new A();
+    A a2 = new A();
+}
+</code></pre><p>}<br>//123</p>
+<p>静态内部类<br>非静态内部类依赖于外部类的实例，也就是说需要先创建外部类实例，才能用这个实例去创建非静态内部类。而静态内部类不需要<br>静态内部类不能访问外部类的非静态的变量和方法。<br>public class OuterClass {</p>
+<pre><code>class InnerClass {
+}
 
-        return <html lang={language ? language.substr(0, 2) : ''}>
-            <Head env={env} site={site} config={config} helper={helper} page={page} />
-            <body class={`is-${columnCount}-column`}>
-                <Navbar config={config} helper={helper} page={page} />
-                <section class="section">
-                    <div class="container">
-                        <div class="columns">
-                            <div class={classname({
-                                column: true,
-                                'order-2': true,
-                                'column-main': true,
-                                'is-12': columnCount === 1,
-                                'is-8-tablet is-8-desktop is-8-widescreen': columnCount === 2,
-                                'is-8-tablet is-8-desktop is-6-widescreen': columnCount === 3
-                            })} dangerouslySetInnerHTML={{ __html: body }}></div>
-                            <Widgets site={site} config={config} helper={helper} page={page} position={'left'} />
-                            <Widgets site={site} config={config} helper={helper} page={page} position={'right'} />
-                        </div>
-                    </div>
-                </section>
-                <Footer config={config} helper={helper} />
-                <Scripts site={site} config={config} helper={helper} page={page} />
-                <Search config={config} helper={helper} />
-            </body>
-        </html>;
-    }
-};
+static class StaticInnerClass {
+}
+
+public static void main(String[] args) {
+    // InnerClass innerClass = new InnerClass(); // &apos;OuterClass.this&apos; cannot be referenced from a static context
+    OuterClass outerClass = new OuterClass();
+    InnerClass innerClass = outerClass.new InnerClass();
+    StaticInnerClass staticInnerClass = new StaticInnerClass();
+}
+</code></pre><p>}</p>
+<p>初始化顺序<br>静态变量和静态语句块优先于实例变量和普通语句块，静态变量和静态语句块的初始化顺序取决于他们在代码中的顺序<br>public static String staticField=”静态变量“；</p>
+<p>static {<br>    System.out.println(“静态语句块”);<br>}</p>
+<p>public String field=”实例变量”;</p>
+<p>{<br>    System.out.println(“普通语句块”);<br>}</p>
+<p>最后才是构造函数的初始化<br>public InitialOrderTest() {<br>    System.out.println(“构造函数”);<br>}</p>
+<p>存在继承情况下，初始化的顺序为：<br>父类（静态变量、静态语句块）<br>子类（静态变量、静态语句块）<br>父类（实例变量、普通语句块)<br>父类（构造函数）<br>子类（实例变量、普通语句块）<br>子类（构造函数）</p>
+<p><strong>7、字符型常量和字符串常量的区别</strong><br>字符型用单引号，字符串用双引号。<br>字符型相当于一个整型值，可以参与表达式运算；字符串常量代表一个地址值<br>字符占两个字节，字符串占若干个</p>
+<p><strong>8、接口和抽象类的区别：</strong><br>接口的默认是public，所有的接口中的方法不能有方法体，而抽象类可以有非抽象的方法。<br>一个类中可以实现多个接口，只能实现一个抽象类。接口本身可以通过extends关键字扩展多个接口。<br>接口方法的默认修饰符是public，抽象方法可以有public、protect和default这些修饰符<br>从设计层面来说，抽象是对类的抽象，是一种模板设计，而接口是对行为的抽象，是一种行为的规范。</p>
+<p><strong>9、深拷贝vs浅拷贝</strong><br>深拷贝：对基本类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。<br>浅拷贝：对基本类型进行值传递，对引用数据类型，拷贝其内存地址。</p>
+<p><strong>10、hashCode()与equals()的相关规定</strong><br>两个对象相等，则两个对象分别调用hashcode一定也是相同的<br>两个对象相等，对两个对象分别调用equals方法都返回true<br>两个对象有相同的hashcode值，它们也不一定是相等的<br>因此，equals 方法被覆盖过，则 hashCode 方法也必须被覆盖<br>hashCode() 的默认行为是对堆上的对象产生独特值。如果没有重写 hashCode()，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）<br><strong>10、反射</strong><br>Java获取反射的三种方法<br>1.通过new对象实现反射机制<br>2.通过路径实现反射机制<br>3.通过类名实现反射机制</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/11/Java基础简单总结（一）/" data-id="ckbgmuuog0000govn7d8l7ma5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/07/如何在Hexo博客发布文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">如何在Hexo博客发布文章</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/11/Java基础简单总结（一）/">Java基础简单总结（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/如何在Hexo博客发布文章/">如何在Hexo博客发布文章</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/Java的集合框架/">Java的集合框架</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
